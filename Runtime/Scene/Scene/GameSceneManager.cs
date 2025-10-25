@@ -372,9 +372,9 @@ namespace GameFrameX.Scene.Runtime
 
             if (value != null)
             {
-                if (sceneOperationHandle.IsSucceed)
+                if (sceneOperationHandle.IsSucceed())
                 {
-                    LoadSceneSuccessCallback(sceneOperationHandle.SceneName, sceneOperationHandle.Duration, value.UserData);
+                    LoadSceneSuccessCallback(sceneOperationHandle.SceneName, sceneOperationHandle.Duration(), value.UserData);
                 }
                 else
                 {
